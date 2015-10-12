@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clionelabs:slacklog',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'This package provides an easy way for sending messages to your slack channels',
   git: 'https://github.com/clionelabs/meteor-slacklog.git',
   documentation: 'README.md'
@@ -9,7 +9,6 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
   api.use('http', ['server']);
-  api.use('ecmascript');
   api.addFiles('slacklog.js');
   api.export('SlackLog', 'server');
 });
