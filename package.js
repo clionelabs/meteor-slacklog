@@ -2,8 +2,7 @@ Package.describe({
   name: 'hiukim:slacklog',
   version: '0.0.1',
   summary: 'This package provides an easy way for sending messages to your slack channels',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/clionelabs/meteor-slacklog.git',
   documentation: 'README.md'
 });
 
