@@ -66,7 +66,10 @@ SlackLog = {
     var self = this;
     var channel = self._channelByName(channelName, true);
     _.extend(options, {
-      channel: channel.id
+      channel: channel.id,
+      as_user: false,
+      username: 'SlackLog',
+      icon_emoji: ':paperclip:'
     });
     self._api('chat.postMessage', options);
   }

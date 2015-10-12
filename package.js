@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clionelabs:slacklog',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'This package provides an easy way for sending messages to your slack channels',
   git: 'https://github.com/clionelabs/meteor-slacklog.git',
   documentation: 'README.md'
