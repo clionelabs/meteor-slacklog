@@ -25,7 +25,7 @@ SlackLog = {
     if (response.statusCode === 200 && response.data.ok) {
       return response.data;
     } else {
-      throw new Meteor.Error('[SlackLog] Improper response: ' + JSON.stringify(response));
+      throw new Meteor.Error('[SlackLog] Improper response: ' + JSON.stringify(response), ", request: ", JSON.stringify(params));
     }
   },
 
@@ -65,12 +65,15 @@ SlackLog = {
   log: function(channelName, options) {
     var self = this;
     var channel = self._channelByName(channelName, true);
-    _.extend(options, {
+
+    var defaultOptions = {
       channel: channel.id,
       as_user: false,
       username: 'SlackLog',
       icon_emoji: ':paperclip:'
-    });
+    };
+    options = _.extend({}, defaultOptions, options);
+
     self._api('chat.postMessage', options);
   }
 }
