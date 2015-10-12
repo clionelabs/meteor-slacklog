@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'hiukim:slacklog',
+  name: 'clionelabs:slacklog',
   version: '0.0.1',
   summary: 'This package provides an easy way for sending messages to your slack channels',
   git: 'https://github.com/clionelabs/meteor-slacklog.git',
@@ -16,5 +16,5 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('ecmascript');
-  api.use('hiukim:slacklog');
+  api.use('clionelabs:slacklog');
 });
