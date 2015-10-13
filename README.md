@@ -16,7 +16,9 @@ Traditionally, we do normal console.log on server, and then check our logs regul
 
   ```
   {
-    slackLog: API_TOKEN
+    slackLog: {
+      token: API_TOKEN
+    }
   }
   ```
 
